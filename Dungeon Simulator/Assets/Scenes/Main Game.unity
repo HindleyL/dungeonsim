@@ -1701,7 +1701,7 @@ PrefabInstance:
     - target: {fileID: 2974233699364105853, guid: f88b39f14d09d1b4295715c468e8106e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.167244
+      value: 3.55
       objectReference: {fileID: 0}
     - target: {fileID: 2974233699364105853, guid: f88b39f14d09d1b4295715c468e8106e,
         type: 3}
@@ -2476,21 +2476,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun
       objectReference: {fileID: 0}
-    - target: {fileID: -8134438308503345781, guid: 53402c14ec6e6144c9443c1f82e56906,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8.18
-      objectReference: {fileID: 0}
-    - target: {fileID: -7493128907013995629, guid: 53402c14ec6e6144c9443c1f82e56906,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10.96
-      objectReference: {fileID: 0}
-    - target: {fileID: -7493128907013995629, guid: 53402c14ec6e6144c9443c1f82e56906,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -9.713205
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 53402c14ec6e6144c9443c1f82e56906,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2560,6 +2545,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8134438308503345781, guid: 53402c14ec6e6144c9443c1f82e56906,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.18
+      objectReference: {fileID: 0}
+    - target: {fileID: -7493128907013995629, guid: 53402c14ec6e6144c9443c1f82e56906,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.96
+      objectReference: {fileID: 0}
+    - target: {fileID: -7493128907013995629, guid: 53402c14ec6e6144c9443c1f82e56906,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.713205
       objectReference: {fileID: 0}
     - target: {fileID: 7796965159598972112, guid: 53402c14ec6e6144c9443c1f82e56906,
         type: 3}
