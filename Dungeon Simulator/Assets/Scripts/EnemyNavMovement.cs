@@ -17,9 +17,10 @@ public class EnemyNavMovement : MonoBehaviour
     void Update()
     {
         agent.SetDestination(target.position);
-        //if(agent.remianingDistance<(agent.stoppingDistance+0.5f))
         {
             transform.LookAt(target.transform);
+            Vector3 ang=transform.eulerAngles;
+            transform.eulerAngles = new Vector3(0,ang.y,0);
         }
     }
 }

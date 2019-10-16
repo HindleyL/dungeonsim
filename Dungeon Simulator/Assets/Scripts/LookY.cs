@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LookY : MonoBehaviour
 {
-    [SerializeField] float sensitivityY;
+    [SerializeField] float sensitivityY = 5.0f;
     public float minimumY = -30f;
     public float maximumY = 30f;
     float rotationY = 0f;

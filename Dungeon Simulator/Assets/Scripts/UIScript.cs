@@ -14,6 +14,7 @@ public class UIScript : MonoBehaviour
     public TMP_Text timeNum;
     static int score;
     public GameObject losePanel;
+    public Text levelTxt;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +43,7 @@ public class UIScript : MonoBehaviour
         healthTxt.text = "Health: " + healthScript.getHealth();
         timeNum.text = "" + (int)Time.time;
         scoreNum.text = score + "";
+        levelTxt.text = "Level : " + Spawning.level;
     }
 
     IEnumerator updateUI(){
