@@ -18,6 +18,7 @@ public class Shooting : MonoBehaviour
     }
 
     // Update is called once per frame
+    public GameObject losepanel;
     void Update()
     {
         if (Input.GetKey(KeyCode.Escape))
@@ -27,15 +28,18 @@ public class Shooting : MonoBehaviour
         }
         if(Input.GetButtonDown("Fire1"))
         {
-            anim.SetTrigger("Trigger");
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            Ray mouseRay = GetComponentInChildren<Camera>().ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-            RaycastHit hitInfo;
-            if (Physics.Raycast (mouseRay, out hitInfo,100,layerMask))
+            if (!losepanel.activeInHierarchy)
             {
-                Debug.DrawLine(transform.position, hitInfo.point, Color.red, 5.0f);
-                HealthScript enemyHealth = hitInfo.transform.GetComponent<HealthScript>();
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+                anim.SetTrigger("Trigger");
+                Ray mouseRay = GetComponentInChildren<Camera>().ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+                RaycastHit hitInfo;
+                if (Physics.Raycast (mouseRay, out hitInfo,100,layerMask))
+                {
+                    Debug.DrawLine(transform.position, hitInfo.point, Color.red, 5.0f);
+                    HealthScript enemyHealth = hitInfo.transform.GetComponent<HealthScript>();
                 if (enemyHealth != null)
                 {
                     enemyHealth.Damage(damageDealt);

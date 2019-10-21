@@ -56,6 +56,7 @@ public class UIScript : MonoBehaviour
         if (healthScript.IsDead)
         {
             losePanel.SetActive(true);
+            Cursor.visible = true;
             Time.timeScale = 0;
         }
         yield return new WaitForSeconds(0.01f);

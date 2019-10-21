@@ -38,6 +38,7 @@ public class HealthScript : MonoBehaviour
             }
             else
             {
+                Cursor.visible = true;
                 losePanel.SetActive(true);
                 Time.timeScale = 0;
             }
