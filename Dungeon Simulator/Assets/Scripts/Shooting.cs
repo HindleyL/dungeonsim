@@ -43,8 +43,13 @@ public class Shooting : MonoBehaviour
                 if (enemyHealth != null)
                 {
                     enemyHealth.Damage(damageDealt);
+                    Debug.Log(damageDealt);
                 }
             }
         }
+    }
+        public void upgradeGun()
+    {
+        damageDealt += 5;
     }
 }

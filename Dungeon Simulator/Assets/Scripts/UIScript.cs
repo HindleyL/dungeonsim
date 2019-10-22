@@ -12,7 +12,7 @@ public class UIScript : MonoBehaviour
     float lastHP;
     public TMP_Text scoreNum;
     public TMP_Text timeNum;
-    static int score;
+    public static int score;
     public GameObject losePanel;
     public Text levelTxt;
 

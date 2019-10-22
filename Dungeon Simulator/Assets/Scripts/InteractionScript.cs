@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InteractionScript : MonoBehaviour
 {
+    int upgradeScore = 500;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +20,10 @@ public class InteractionScript : MonoBehaviour
             RaycastHit hitInfo;
             if (Physics.Raycast(mouseRay, out hitInfo))
             {
-                GunUpgrade Gun2 = hitInfo.transform.GetComponent<GunUpgrade>();
-                if (Gun2.enabled)
+                if (hitInfo.transform.gameObject.tag == "Upgrade"&& UIScript.score>upgradeScore)
                 {
-                    Gun2.enabled = true;
+                    GetComponent<Shooting>().upgradeGun();
+                    upgradeScore += 500;
                 }
             }
         }

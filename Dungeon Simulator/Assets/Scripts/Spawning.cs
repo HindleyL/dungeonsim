@@ -26,7 +26,6 @@ public class Spawning : MonoBehaviour
     
     void Spawn()
     {
-        Debug.Log(spawnNum);
         for(int i=0;i<spawnNum;i++)
         {
             int num = Mathf.Min(i < 20 ? i > 5 ? 1 : 0 : Mathf.FloorToInt(i / 20.0f) + 1,SpawnObjects.Length - 1);
