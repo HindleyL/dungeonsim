@@ -7,9 +7,12 @@ public class Shooting : MonoBehaviour
     public Animator anim;
     [SerializeField] int damageDealt = 20;
     [SerializeField] LayerMask layerMask;
+    AudioSource audioSrc;
+    [SerializeField] AudioClip shootclip;
     // Start is called before the first frame update
     void Start()
     {
+        audioSrc=GetComponent<AudioSource>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         layerMask |= Physics.IgnoreRaycastLayer;
@@ -34,6 +37,8 @@ public class Shooting : MonoBehaviour
                 Cursor.visible = false;
             }
                 anim.SetTrigger("Trigger");
+                audioSrc.clip = shootclip;
+                audioSrc.Play();
                 Ray mouseRay = GetComponentInChildren<Camera>().ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
                 RaycastHit hitInfo;
                 if (Physics.Raycast (mouseRay, out hitInfo,100,layerMask))
