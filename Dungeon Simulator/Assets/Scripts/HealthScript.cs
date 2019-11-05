@@ -31,18 +31,23 @@ public class HealthScript : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            if (gameObject.tag != "Player")
-            {
-            UIScript.updateScore(50);
-            Destroy(gameObject);
-            }
-            else
-            {
-                Cursor.visible = true;
-                losePanel.SetActive(true);
-                Time.timeScale = 0;
-            }
+            currentHealth = 0;
+                if (gameObject.tag != "Player")
+                {
+                    UIScript.updateScore(50);
+                    Destroy(gameObject);
+                }
+                else
+                {
+                    Cursor.visible = true;
+                    losePanel.SetActive(true);
+                    Time.timeScale = 0;
+                }
 
+        }
+        else if (currentHealth >=100)
+        {
+            currentHealth = 100;
         }
     }
 }
