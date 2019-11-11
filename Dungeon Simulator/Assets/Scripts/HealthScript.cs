@@ -7,6 +7,7 @@ public class HealthScript : MonoBehaviour
     [SerializeField] int maximumHealth = 100;
     int currentHealth = 0;
     public GameObject losePanel;
+    public GameObject healthPickup;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,11 @@ public class HealthScript : MonoBehaviour
                 {
                     UIScript.updateScore(50);
                     Destroy(gameObject);
+                    int num = Random.Range (0,20);
+                    if (num == 13)
+                    {
+                        Instantiate(healthPickup,transform.position,Quaternion.identity);
+                    }
                 }
                 else
                 {

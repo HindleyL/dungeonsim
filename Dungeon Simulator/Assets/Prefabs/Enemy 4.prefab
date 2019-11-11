@@ -98,6 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maximumHealth: 120
   losePanel: {fileID: 0}
+  healthPickup: {fileID: 7165181751072731561, guid: abcc7af4999a15441b622bac0163658d,
+    type: 3}
 --- !u!143 &6443225721848743998
 CharacterController:
   m_ObjectHideFlags: 0

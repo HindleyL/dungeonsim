@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public TMP_Text score;
     public TMP_Text playerHealthTxt;
     public TMP_Text timeTxt;
+    public TMP_Text waterTxt;
     // Start is called before the first frame update
     void Start()
     {

@@ -7,8 +7,11 @@ using TMPro;
 public class UIScript : MonoBehaviour
 {
     public HealthScript healthScript;
+    public WaterScript waterScript;
     public TMP_Text healthTxt;
     public Slider healthBar;
+    public TMP_Text waterTxt;
+    public Slider waterBar;
     float lastHP;
     public TMP_Text scoreNum;
     public TMP_Text timeNum;
@@ -30,6 +33,9 @@ public class UIScript : MonoBehaviour
         healthBar.value = healthScript.getHealth();
         healthTxt.text = "Health: " + healthScript.getHealth();
         lastHP = healthScript.getHealth();
+        waterBar.maxValue = waterScript.getMaxWater();
+        waterBar.value = waterScript.getWater();
+        waterTxt.text = "Water Level: " + waterScript.getWater();
     }
 
     public static void updateScore(int amount)
@@ -44,9 +50,12 @@ public class UIScript : MonoBehaviour
         timeNum.text = "" + (int)Time.time;
         scoreNum.text = score + "";
         levelTxt.text = "Level : " + Spawning.level;
+        waterBar.value = waterScript.getWater();
+        waterTxt.text = "Water Level: " + waterScript.getWater();
     }
 
-    IEnumerator updateUI(){
+    IEnumerator updateUI()
+    {
         lastHP = Mathf.Lerp(lastHP, healthScript.getHealth(),0.1f);
         healthBar.value = lastHP;
         healthTxt.text = "Health: " + healthScript.getHealth();
