@@ -174,7 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maximumHealth: 80
   losePanel: {fileID: 0}
-  healthPickup: {fileID: 7165181751072731561, guid: abcc7af4999a15441b622bac0163658d,
+  healthPickup: {fileID: 8796267356339047129, guid: cd8fb4ba7bef54d429a6358ae5230aeb,
     type: 3}
 --- !u!143 &8519467586430619125
 CharacterController:

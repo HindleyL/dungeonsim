@@ -10,8 +10,8 @@ public class healPickup : MonoBehaviour
         HealthScript health = collider.GetComponent<HealthScript>();
         if (health != null&&collider.tag=="Player")
         {
-            GetComponent<MeshRenderer>().enabled = false;
             health.Damage(-50);
+            Destroy (gameObject,0.1f);
         }
     }
     // Start is called before the first frame update
