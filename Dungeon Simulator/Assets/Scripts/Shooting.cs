@@ -9,6 +9,7 @@ public class Shooting : MonoBehaviour
     [SerializeField] LayerMask layerMask;
     AudioSource audioSrc;
     [SerializeField] AudioClip shootclip;
+    public ParticleSystem mf;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,9 +37,10 @@ public class Shooting : MonoBehaviour
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
             }
-                anim.SetTrigger("Trigger");
+                //anim.SetTrigger("Trigger");
                 audioSrc.clip = shootclip;
                 audioSrc.Play();
+                mf.Play();
                 Ray mouseRay = GetComponentInChildren<Camera>().ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
                 RaycastHit hitInfo;
                 if (Physics.Raycast (mouseRay, out hitInfo,100,layerMask))

@@ -2,12 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.Events;
 public class MenuScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
+    UnityEvent gameStartEvent = new UnityEvent();
+
+    void OnGameStart()
+    {
+        UIScript.score = 0;
+    }
+    
+    void Start ()
+    {
+        gameStartEvent.AddListener(OnGameStart);
+    }
     public void loadMain()
     {
+        gameStartEvent.Invoke();
         SceneManager.LoadScene(2);
     }
     public void loadHelp()
