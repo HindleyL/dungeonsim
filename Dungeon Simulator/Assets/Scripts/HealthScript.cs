@@ -8,6 +8,7 @@ public class HealthScript : MonoBehaviour
     int currentHealth = 0;
     public GameObject losePanel;
     public GameObject healthPickup;
+    public float nextMove;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +37,7 @@ public class HealthScript : MonoBehaviour
                 if (gameObject.tag != "Player")
                 {
                     UIScript.updateScore(50);
+                    Spawning.enemies.Remove(gameObject.GetComponent<EnemyNavMovement>());
                     Destroy(gameObject);
                     int num = Random.Range (0,20);
                     if (num == 13)

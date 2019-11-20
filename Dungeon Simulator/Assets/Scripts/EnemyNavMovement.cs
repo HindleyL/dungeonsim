@@ -5,22 +5,21 @@ using UnityEngine;
 public class EnemyNavMovement : MonoBehaviour
 {
     UnityEngine.AI.NavMeshAgent agent;
-    public Transform target;
+    public List <Transform> target = new List <Transform>();
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        target.Add (GameObject.FindGameObjectWithTag("Player").transform);
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
-    {
-        agent.SetDestination(target.position);
-        {
-            transform.LookAt(target.transform);
-            Vector3 ang=transform.eulerAngles;
-            transform.eulerAngles = new Vector3(0,ang.y,0);
-        }
+    { 
+        agent.SetDestination(target[target.Count -1].position);
+            
+        transform.LookAt(target[target.Count -1].transform);
+        Vector3 ang=transform.eulerAngles;
+        transform.eulerAngles = new Vector3(0,ang.y,0);
     }
 }
