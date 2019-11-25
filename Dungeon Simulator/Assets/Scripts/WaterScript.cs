@@ -6,7 +6,7 @@ public class WaterScript : MonoBehaviour
 {
     [SerializeField] int maximumWater = 100;
     int CurrentWater;
-    bool inWater;
+    public bool inWater = false;
     int drown;
     // Start is called before the first frame update
     void Start()
@@ -25,32 +25,19 @@ public class WaterScript : MonoBehaviour
     {
         return maximumWater;
     }
-    // Update is called once per frame
-    public void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            other.gameObject.GetComponent<WaterScript>().inWater = true;
-        }
-    }
-    void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            other.gameObject.GetComponent<WaterScript>().inWater = false;
-        }
-    }
 
-    public void WaterLoss(){
+    public void WaterLoss()
+    {
         if (!inWater)
         {
             CurrentWater -= 10;
+            Debug.Log(drown);
             drown = 0;
-        if(CurrentWater <= 0&&gameObject.tag=="Player")
-        {
-            gameObject.GetComponent<HealthScript>().Damage(5);
-            Debug.Log("LoseHealth");
-        }
+            if(NoWater &&gameObject.tag=="Player")
+            {
+                gameObject.GetComponent<HealthScript>().Damage(5);
+                Debug.Log("LoseHealth");
+            }
         }
         else
         {
@@ -59,6 +46,7 @@ public class WaterScript : MonoBehaviour
             if(drown >5)
             {
                 gameObject.GetComponent<HealthScript>().Damage(5);
+                Debug.Log(123);
             }
         }
         if (CurrentWater <= 0)
@@ -69,7 +57,7 @@ public class WaterScript : MonoBehaviour
         {
             CurrentWater = 100;
         }
-        }
+    }
 }
 
 
