@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Upgrade
   - Pool
+  - saveButtons
   layers:
   - Default
   - TransparentFX

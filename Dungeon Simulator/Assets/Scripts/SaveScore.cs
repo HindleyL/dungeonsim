@@ -6,21 +6,32 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class SaveScore : MonoBehaviour
 {
+    public Transform player;
+    public bool loadBank;
+    public float distance = 5f;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
     void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.F))
+    {               
+        if (Input.GetKeyDown(KeyCode.F)&&(Vector3.Distance(transform.position,player.position))<distance)
         {
-            SaveTotalScore();
-            Debug.Log("Save Score");
+                    if (loadBank)
+                    {
+                        UIScript.score = GetTotalScore();
+                        Debug.Log("Load Score");
+                    }
+                    else 
+                    {
+                        SaveTotalScore();
+                        Debug.Log("Save Score");
+                    }
+                }
         }
-    }
 
     private void SaveTotalScore()
     {        
