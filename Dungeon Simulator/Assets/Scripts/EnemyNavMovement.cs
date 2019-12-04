@@ -17,7 +17,6 @@ public class EnemyNavMovement : MonoBehaviour
     void Update()
     { 
         agent.SetDestination(target[target.Count -1].position);
-            
         transform.LookAt(target[target.Count -1].transform);
         Vector3 ang=transform.eulerAngles;
         transform.eulerAngles = new Vector3(0,ang.y,0);

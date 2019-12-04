@@ -8,18 +8,25 @@ public class Transport : MonoBehaviour
     
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player" || other.gameObject.tag == "Enemy"){
+        if(other.gameObject.tag == "Player" || other.gameObject.tag == "Enemy")
+        {
             if(Time.time > other.GetComponent<HealthScript>().nextMove)
             {
                 other.GetComponent<HealthScript>().nextMove = Time.time + 5.0f;
+                
                 other.GetComponent<CharacterController>().enabled = false;
+                
                 bool didDestroy = false;
+                //turn off nav mesh agent before teleport
                 if(other.GetComponent<UnityEngine.AI.NavMeshAgent>()){
                     other.GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = false;
                     didDestroy = true;
                 }
+                //teleports objects
                 other.gameObject.transform.position = waypoint.position;
-                if(didDestroy){
+                //turn nav mesh back on after teleport
+                if(didDestroy)
+                {
                     other.GetComponent<UnityEngine.AI.NavMeshAgent>().enabled = true;
                 }
                 other.GetComponent<CharacterController>().enabled = true;

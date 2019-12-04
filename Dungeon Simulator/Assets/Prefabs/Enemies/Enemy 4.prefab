@@ -92,6 +92,7 @@ MonoBehaviour:
   losePanel: {fileID: 0}
   healthPickup: {fileID: 8796267356339047129, guid: cd8fb4ba7bef54d429a6358ae5230aeb,
     type: 3}
+  nextMove: 0
 --- !u!143 &6443225721848743998
 CharacterController:
   m_ObjectHideFlags: 0
@@ -122,7 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6313d916da0701458d2830ddf135710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target:
+  - {fileID: 0}
 --- !u!195 &8082965596684621079
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -156,8 +158,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8819962, y: 2.4813843, z: 1}
-  m_Center: {x: -0.09999466, y: 0.74069214, z: 0}
+  m_Size: {x: 1.8819962, y: 2.0329132, z: 1}
+  m_Center: {x: -0.09999466, y: 0.5164566, z: 0}
 --- !u!1 &8082965597013713792
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,11 +248,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: parasite_l_starkie
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: f91b8266f2d8a784ab2390f1ff0ff581,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 950a04a48a00c6a4f8d2b7962056243d, type: 2}
     - target: {fileID: -4216859302048453862, guid: f91b8266f2d8a784ab2390f1ff0ff581,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -321,6 +318,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.01
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: f91b8266f2d8a784ab2390f1ff0ff581,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 950a04a48a00c6a4f8d2b7962056243d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f91b8266f2d8a784ab2390f1ff0ff581, type: 3}
 --- !u!4 &2307322012304036852 stripped

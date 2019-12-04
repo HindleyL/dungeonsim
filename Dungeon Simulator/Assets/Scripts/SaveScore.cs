@@ -16,11 +16,13 @@ public class SaveScore : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {               
-        if (Input.GetKeyDown(KeyCode.F)&&(Vector3.Distance(transform.position,player.position))<distance)
+
+    void OnTriggerEnter(Collider collision)
+    {
+
+        if(collision.gameObject.tag == "Player")
         {
-                    if (loadBank)
+            if (loadBank)
                     {
                         UIScript.score = GetTotalScore();
                         Debug.Log("Load Score");

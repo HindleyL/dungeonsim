@@ -30,7 +30,7 @@ public class WaterScript : MonoBehaviour
     {
         if (!inWater)
         {
-            CurrentWater -= 10;
+            CurrentWater -= 1;
             Debug.Log(drown);
             drown = 0;
             if(NoWater &&gameObject.tag=="Player")
