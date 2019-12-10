@@ -1721,7 +1721,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 264.28906, y: -27.170044}
+  m_AnchoredPosition: {x: 204, y: -26}
   m_SizeDelta: {x: 171.42, y: 20.880005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &105284771
@@ -2821,7 +2821,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Health          : 100'
+  m_text: Health :100
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2887,12 +2887,12 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -0.000032245523, w: 0}
+  m_margin: {x: 0, y: 0, z: 51.660427, w: 0}
   m_textInfo:
     textComponent: {fileID: 173674516}
-    characterCount: 21
+    characterCount: 11
     spriteCount: 0
-    spaceCount: 11
+    spaceCount: 1
     wordCount: 2
     linkCount: 0
     lineCount: 1
@@ -13109,7 +13109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 264.28906, y: -54.660004}
+  m_AnchoredPosition: {x: 203, y: -84}
   m_SizeDelta: {x: 171.42, y: 20.880005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &936006025
@@ -14978,7 +14978,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108074192}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 48.98, z: -0.04}
+  m_LocalPosition: {x: 0, y: 16.5, z: -0.04}
   m_LocalScale: {x: 0.2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15960,7 +15960,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 117.59961, y: -63.537003}
+  m_AnchoredPosition: {x: 117.59961, y: -71}
   m_SizeDelta: {x: 235.2, y: 48.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1190354726
@@ -16049,7 +16049,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -0.000032245523, w: 0}
+  m_margin: {x: 0, y: 0, z: 131.99692, w: 0}
   m_textInfo:
     textComponent: {fileID: 1190354726}
     characterCount: 17
@@ -16057,7 +16057,7 @@ MonoBehaviour:
     spaceCount: 3
     wordCount: 3
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
