@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDelay: 1
-  damageDealt: 10
+  damageDealt: 20
 --- !u!1 &4001313280873834119
 GameObject:
   m_ObjectHideFlags: 0

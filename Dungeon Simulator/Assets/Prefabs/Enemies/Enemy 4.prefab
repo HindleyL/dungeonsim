@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDelay: 1
-  damageDealt: 10
+  damageDealt: 40
 --- !u!1001 &7313834712698190062
 PrefabInstance:
   m_ObjectHideFlags: 0
