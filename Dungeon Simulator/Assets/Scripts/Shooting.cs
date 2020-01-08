@@ -10,6 +10,9 @@ public class Shooting : MonoBehaviour
     AudioSource audioSrc;
     [SerializeField] AudioClip shootclip;
     public ParticleSystem mf;
+    public GameObject grenade;
+    public float timeToThrow = 10; 
+    float timehold;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +56,12 @@ public class Shooting : MonoBehaviour
                     Debug.Log(damageDealt);
                 }
             }
+        }
+        if (Input.GetKeyDown(KeyCode.G)&&Time.time>timehold+timeToThrow)
+        {
+            GameObject newgrenade = Instantiate(grenade,transform.position+new Vector3(0,1,1),Quaternion.identity);
+            newgrenade.GetComponent<Rigidbody>().AddForce(new Vector3 (0,1,1));
+            timehold = Time.time;
         }
     }
         public void upgradeGun()
