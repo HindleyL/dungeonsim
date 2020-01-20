@@ -4888,7 +4888,7 @@ GameObject:
   - component: {fileID: 296368370}
   - component: {fileID: 296368369}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16920,6 +16920,7 @@ MonoBehaviour:
   shootclip: {fileID: 8300000, guid: a88b7961fa2776e4c80bba45e51d35c2, type: 3}
   mf: {fileID: 1508093074}
   grenade: {fileID: 6958417739802643775, guid: 82e09015349a0e244a9f5cd810337c62, type: 3}
+  timeToThrow: 10
   losepanel: {fileID: 5720409}
 --- !u!114 &1195906853
 MonoBehaviour:
